@@ -56,7 +56,6 @@ def checkout(cart, coupons)
   total = 0
   cart.each do |index|
     total += index[:count] * index[:price]
-    puts total
   end
   if total > 100.00
     total *= 0.9
