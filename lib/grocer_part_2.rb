@@ -18,7 +18,6 @@ def apply_coupons(cart, coupons)
       end
     end
   end
-  puts cart
   return cart
           
   
@@ -29,6 +28,13 @@ def apply_clearance(cart)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  cart.each do |index|
+    if index[:clearance] == true
+      index[:price] = (index[price] * .8).round(2)
+    end
+  
+  
+  
 end
 
 def checkout(cart, coupons)
